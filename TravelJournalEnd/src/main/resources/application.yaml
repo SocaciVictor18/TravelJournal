@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: TravelJournalEnd
+  datasource:
+    url: jdbc:postgresql://users-db:5433/users
+    username: postgres
+    password: postgres
+  jpa:
+    hibernate:
+      ddl-auto: validate
+  flyway:
+    enabled: true
