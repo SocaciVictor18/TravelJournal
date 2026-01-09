@@ -1,6 +1,7 @@
 package org.example.traveljournalend.model;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotNull;
 import lombok.*;
 
@@ -11,17 +12,21 @@ import lombok.*;
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
-public class Users {
+public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     @NotNull
-    private String username;
+    private String name;
+
+    @NotNull
+    private String surname;
 
     @Column(unique = true)
     @NotNull
+    @Email
     private String email;
 
     @NotNull
